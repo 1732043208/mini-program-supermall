@@ -5,6 +5,7 @@ import {
 } from '../../service/home.js'
 // pages/home/home.js
 const types = ['pop', 'new', 'sell'];
+const TOP_DISTANCE = 1000
 Page({
 
   /**
@@ -28,7 +29,10 @@ Page({
         list: []
       }
     },
-    currentType: 'pop'
+    currentType: 'pop',
+    showBackTop: false,
+    isTabFixed: false,
+    tabScrollTop: 0
   },
 
   onLoad: function (options) {
@@ -49,11 +53,37 @@ Page({
     })
     // 设置currentType
   },
+  handleImageLoad() {
+    wx.createSelectorQuery().select('#tab-control').boundingClientRect(rect => {
+      this.data.tabScrollTop = rect.top
+    }).exec()
+  },
 
   onReachBottom() {
     // 上拉加载更多 => 请求新的数据
     this._getGoodsData(this.data.currentType)
   },
+  onPageScroll(option) {
+    // 1.取出scrollTop
+    const scrollTop = option.scrollTop;
+
+    // 2.修改showbackTop属性  
+    //官方：不要在滚动的函数回调中频繁调用this.setData
+    const isShow1 = scrollTop >= TOP_DISTANCE;
+    if (isShow1 != this.data.showBackTop) {
+      this.setData({
+        showBackTop: isShow1
+      })
+    }
+    // 3.修改isTabFixed属性
+    const isShow2 = scrollTop >= this.data.tabScrollTop;
+    if (isShow2 != this.data.isTabFixed) {
+      this.setData({
+        isTabFixed: isShow2
+      })
+    }
+  },
+
 
   // -------------------------网络请求函数----------------------------
   _getMultiData() {

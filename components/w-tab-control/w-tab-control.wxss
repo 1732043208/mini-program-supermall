@@ -3,16 +3,19 @@
   display: flex;
   height: 88rpx;
   line-height: 88rpx;
+  background: #fff;
+  padding-bottom: 6rpx;
 }
 .tab-item{
   flex: 1;
   text-align: center;
 }
 .active{
-  color: red;
+  color: #ff5777;
  
 }
 .active >.text{
-  border-bottom: 6rpx solid red;
-  padding: 20rpx 16rpx;
+  border-bottom: 8rpx solid #ff5777;
+  padding: 20rpx 10rpx;
+  padding-bottom: 8rpx;
 }
