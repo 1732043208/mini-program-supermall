@@ -1,0 +1,4 @@
+<!--pages/home/childCpn/w-popular/w-popular.wxml-->
+<view class="popular">
+  <image src="/assets/home/popular_bg.jpg" mode="widthFix" style="width:100%"/>
+</view>

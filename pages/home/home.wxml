@@ -1,0 +1,15 @@
+<!--pages/home/home.wxml-->
+<!-- 展示轮播图 -->
+<w-swiper list="{{banners}}" />
+
+<!-- 2.推荐数据展示 -->
+<w-recommend list="{{recommends}}"></w-recommend>
+
+<!-- 3.展示本周流行 -->
+<w-popular></w-popular>
+
+<!-- 4.tab-control -->
+<w-tab-control titles="{{titles}}" bind:tabclick="handleTabClick"></w-tab-control>
+
+<!-- 5.展示商品数据 -->
+<w-goods goods="{{goods[currentType].list}}"/>
