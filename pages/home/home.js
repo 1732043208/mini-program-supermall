@@ -32,7 +32,8 @@ Page({
     currentType: 'pop',
     showBackTop: false,
     isTabFixed: false,
-    tabScrollTop: 0
+    tabScrollTop: 0,
+    images:[]
   },
 
   onLoad: function (options) {
@@ -88,7 +89,13 @@ Page({
   // -------------------------网络请求函数----------------------------
   _getMultiData() {
     getMultiData().then(res => {
-      const banners = res.data.data.banner.list;
+      var banners = res.data.data.banner.list;
+      const newarr = [];
+      for (let i = 0; i < banners.length; i++) {
+        newarr.push(banners[i].image)
+      }
+      banners = newarr;
+
       const recommends = res.data.data.recommend.list
 
       //将banners和recommends放到data中
@@ -109,17 +116,20 @@ Page({
       // 2.1取出数据
       const list = res.data.data.list
 
-      //  2.2将数据设置到毒地应type的list中
+      //  2.2将数据设置对应type的list中
       const oldList = this.data.goods[type].list;
+
       oldList.push(...list);
+ 
+      // console.log(oldList)
       // 2.3将数据设置到data中的goods中
       const typekey = `goods.${type}.list`;
       const pagekey = `goods.${type}.page`;
       this.setData({
         [typekey]: oldList,
-        [pagekey]: page
+        [pagekey]: page,
       })
-      console.log(res)
+      // console.log(res)
     })
   }
 })

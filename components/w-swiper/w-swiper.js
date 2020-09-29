@@ -7,6 +7,10 @@ Component({
     list: {
       type: Array,
       value: []
+    },
+    isShow: {
+      type: Boolean,
+      value: false
     }
   },
 

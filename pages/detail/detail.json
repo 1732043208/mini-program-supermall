@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "w-swiper": "/components/w-swiper/w-swiper",
+    "w-goods":"/components/w-goods/w-goods",
+    "w-bottom-bar":"/pages/detail/childCpns/w-bottom-bar"
+  },
+  "navigationBarTitleText": "商品"
+}

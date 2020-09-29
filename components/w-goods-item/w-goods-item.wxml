@@ -1,11 +1,26 @@
 <!--components/w-goods-item/w-goods-item.wxml-->
-<view class="goods-item">
-  <image src="{{item.show.img}}" mode="widthFix"  class="image"/>
+<!-- 当传的布尔值为true的时候 -->
+<view class="goods-item" bindtap="pushDetailPage" data-iid='{{item.iid}}' wx:if="{{imageItemShow}}">
+  <image src="{{item.show.img}}" mode="widthFix" class="image" />
   <view class="desc-info">
     <view class="title">{{item.title}}</view>
     <view class="info">
       <text class="price">￥{{item.price}}</text>
-      <image class="icon" src="/assets/common/collect.png"/>
+      <image class="icon" src="/assets/common/collect.png" />
+      <text class="cfav">{{item.cfav}}</text>
+    </view>
+  </view>
+</view>
+
+<!-- 当传的布尔值为false的时候 -->
+<view class="goods-item"  wx:if="{{!imageItemShow}}">
+  <image src="{{item.image}}" mode="widthFix" class="image" />
+
+  <view class="desc-info">
+    <view class="title">{{item.title}}</view>
+    <view class="info">
+      <text class="price">￥{{item.price}}</text>
+      <image class="icon" src="/assets/common/collect.png" />
       <text class="cfav">{{item.cfav}}</text>
     </view>
   </view>

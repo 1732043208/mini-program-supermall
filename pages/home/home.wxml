@@ -13,7 +13,7 @@
 <w-tab-control titles="{{titles}}" wx:if="{{isTabFixed}}" />
 
 <!-- 5.展示商品数据 -->
-<w-goods goods="{{goods[currentType].list}}" />
+<w-goods goods="{{goods[currentType].list}}"/>
 
 <!-- 6.回到顶部 -->
 <!-- hidden属性对于自定义的组件时无效的 -->

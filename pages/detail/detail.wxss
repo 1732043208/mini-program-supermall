@@ -1,0 +1,66 @@
+/* pages/detail/detail.wxss */
+.title {
+  margin: 20rpx;
+  font-size: 36rpx;
+}
+
+.price {
+  margin: 20rpx;
+}
+
+.price>.first {
+  font-size: 54rpx;
+  color: #ff5777;
+}
+
+.price>.second {
+  font-size: 34rpx;
+  text-decoration: line-through;
+}
+
+.price>.discount>.third {
+  color: #ffffff;
+  font-size: 28rpx;
+}
+
+.discount {
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  text-align: center;
+  float: right;
+  margin-right: 100rpx;
+  background: #ff5777;
+  border-radius: 20rpx;
+}
+
+.sales {
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+
+.services {
+  margin-top: 20rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 26rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.space {
+  height: 8rpx;
+  background-color: #F2F5F8;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx
+}
+.comment{
+  margin: 30rpx;
+}

@@ -7,6 +7,10 @@ Component({
     goods: {
       type: Array,
       value: []
+    },
+    imageShow:{
+      type:Boolean,
+      value:true
     }
   },
 

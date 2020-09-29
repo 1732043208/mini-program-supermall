@@ -7,6 +7,10 @@ Component({
     item: {
       type: Object,
       value: {}
+    },
+    imageItemShow:{
+      type:Boolean,
+      value:true
     }
   },
 
@@ -21,6 +25,14 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    pushDetailPage(e) {
+      const id = e.currentTarget.dataset.iid
+
+      wx.navigateTo({
+        url: '../../pages/detail/detail?id=' + id,
+      })
+      
+    }
 
   }
 })

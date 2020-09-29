@@ -1,0 +1,58 @@
+/* pages/detail/childCpns/w-bottom-bar.wxss */
+.bottom-bar {
+  display: flex;
+  height: 100rpx;
+  font-size: 30rpx;
+  box-shadow: 0 -1px 1px rgba(100, 100, 100, .2);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.bar-item {
+flex: 1;
+  display: flex;
+}
+
+.left-item, .right-item {
+flex: 1;
+  text-align: center;
+}
+
+.left-item {
+  flex:2;
+  font-size: 28rpx;
+  line-height: 30rpx;
+}
+
+.left-item image {
+  margin-top: 20rpx;
+}
+
+.left-item image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.right-item {
+  flex:3;
+  line-height: 70rpx;
+  color: #fff;
+  margin: auto;
+}
+
+.cart {
+  background-image: linear-gradient(to right,#FA0000, #FE4E10);
+
+  height: 70rpx;
+  border-radius: 70rpx 0 0 70rpx;
+
+}
+
+.buy {
+  background-image: linear-gradient(to right,#FFA600, #FFBB00);
+  height: 70rpx;
+  border-radius: 0 70rpx 70rpx 0;
+}
