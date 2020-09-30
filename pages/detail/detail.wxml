@@ -95,4 +95,5 @@
 <!-- 商品推荐 -->
 <w-goods goods="{{recommend}}" imageShow="{{false}}"></w-goods>
 
+<!-- 底部导航 -->
 <w-bottom-bar bind:addcart="onAddCart"></w-bottom-bar>

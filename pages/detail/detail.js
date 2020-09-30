@@ -7,6 +7,7 @@ import {
   getrecommend
 } from '../../service/detail.js'
 // pages/detail/detail.js
+const app=getApp()
 Page({
 
   /**
@@ -82,7 +83,16 @@ Page({
     obj.imageURL = this.data.topImages[0];
     obj.title = this.data.itemInfo.title;
     obj.price = this.data.itemInfo.lowPrice;
-    console.log(obj)
+    obj.highPrice=this.data.itemInfo.highPrice;
+    obj.name=this.data.shopInfo.name;
+    obj.discount=this.data.result.promotions.list;
+    // console.log(obj)
+
+    app.addToCart(obj)
+
+    wx.showToast({
+      title: '添加购物车成功',
+    })
   }
 
 })

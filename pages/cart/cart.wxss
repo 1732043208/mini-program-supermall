@@ -1,1 +1,72 @@
 /* pages/cart/cart.wxss */
+.card {
+  position: relative;
+  margin-bottom: 60rpx;
+}
+
+.title {
+  font-size: 30rpx;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.price {
+padding-top: 10rpx;
+  color: red;
+  font-weight: bold;
+  font-size: 34rpx;
+}
+
+.image {
+  width: 160rpx;
+  height: 200rpx;
+  border-radius: 12rpx
+}
+.cutprice{
+  text-decoration: line-through;
+  color: #000;
+  font-size: 26rpx;
+  font-weight: normal;
+}
+.discount {
+  float: left;
+  border: 1rpx solid #ff5777;
+  margin-right: 20rpx;
+  margin-top: 10rpx;
+  padding: 2rpx 6rpx 2rpx 6rpx;
+  color: #ff5777;
+
+}
+
+.footer {
+  display: flex;
+  position: absolute;
+  right: 40rpx;
+  bottom: 14rpx;
+  height: 40rpx;
+  text-align: center;
+}
+
+.footer-left {
+  line-height: 10rpx;
+  border-radius: 20rpx 0 0 20rpx;
+  font-size: 40rpx;
+  border: 1px solid grey;
+}
+
+.footer-middle {
+  width: 80rpx;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.footer-right {
+  border-radius: 0 20rpx 20rpx 0;
+  border: 1px solid grey;
+  font-size: 40rpx;
+  line-height: 30rpx;
+}
