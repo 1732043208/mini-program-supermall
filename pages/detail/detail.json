@@ -2,7 +2,12 @@
   "usingComponents": {
     "w-swiper": "/components/w-swiper/w-swiper",
     "w-goods":"/components/w-goods/w-goods",
-    "w-bottom-bar":"/pages/detail/childCpns/w-bottom-bar"
+    "w-bottom-bar":"/pages/detail/childCpns/w-bottom-bar/w-bottom-bar",
+    "w-shop-price":"/pages/detail/childCpns/w-shop-price/w-shop-price",
+    "w-shop-services":"/pages/detail/childCpns/w-shop-services/w-shop-services",
+    "w-shop-info":"/pages/detail/childCpns/w-shop-info/w-shop-info",
+    "w-shop-shopimage":"/pages/detail/childCpns/w-shop-shopimage/w-shop-shopimage",
+    "w-rate":"/pages/detail/childCpns/w-rate/w-rate"
   },
-  "navigationBarTitleText": "商品"
+  "navigationBarTitleText": "商品详情"
 }

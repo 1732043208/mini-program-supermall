@@ -1,0 +1,17 @@
+/* pages/detail/childCpns/w-shop-info/w-shop-info.wxss */
+.image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 40rpx
+}
+
+.text {
+  position: absolute;
+  top: 30rpx;
+  margin-left: 12rpx
+}
+
+.box {
+  position: relative;
+  margin-bottom: 40rpx
+}

@@ -1,0 +1,32 @@
+<!--pages/detail/childCpns/w-shop-info/w-shop-info.wxml-->
+<wxs module="filters" src="../../../../utils/filter.wxs"></wxs>
+<view class="box">
+  <image src="{{shopInfo.shopLogo}}" class="image" />
+  <text class="text">{{shopInfo.name}}</text>
+</view>
+
+<!-- 店铺总销量和信誉评分 -->
+<view style="display:flex">
+  <view style="flex:1;border-right:1px solid #F4F4F4;margin-top:20rpx">
+    <view style="display:flex;text-align:center">
+      <text style="flex:1;font-size:28rpx">总销量</text>
+      <text style="flex:1;font-size:28rpx">全部宝贝</text>
+    </view>
+    <view style="display:flex;text-align:center">
+      <text style="flex:1;font-size:32rpx">{{filters.toFix(shopInfo.cSells/'10000')}}万</text>
+      <text style="flex:1;font-size:32rpx">{{shopInfo.cGoods}}</text>
+    </view>
+  </view>
+
+  <view style="flex:1;text-align:left">
+    <block wx:for="{{shopInfo.score}}" wx:key="index">
+      <view style="position:relative;">
+        <text style="margin-left:60rpx">{{item.name}}</text>
+        <text style="{{item.isBetter?'color:red':'color:green'}};margin-left:30rpx">{{item.score}}</text>
+        <text
+          style=" position: absolute;right:20rpx;{{item.isBetter?'color:red':'color:green'}}">{{item.isBetter?'高':'低'}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+<button style="margin-top:80rpx">进店逛逛</button>

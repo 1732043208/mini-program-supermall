@@ -1,0 +1,13 @@
+/* pages/detail/childCpns/w-shop-services/w-shop-services.wxss */
+.services {
+  margin-top: 20rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 26rpx;
+  display: flex;
+  justify-content: space-between;
+
+}

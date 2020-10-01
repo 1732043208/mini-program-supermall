@@ -21,9 +21,14 @@ Page({
     detailInfo: {},
     recommend: [],
     rate: [],
-    itemInfo: {}
+    itemInfo: {},
+    show: false,
   },
-
+  open: function () {
+    this.setData({
+        show: true
+    })
+},
   /**
    * 生命周期函数--监听页面加载
    */
@@ -93,6 +98,11 @@ Page({
     wx.showToast({
       title: '添加购物车成功',
     })
+  },
+  sellCountFilter: function (value) {
+    if (value < 10000) return value;
+    return (value / 10000).toFixed(1) + '万'
+
   }
 
 })

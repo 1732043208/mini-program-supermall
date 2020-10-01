@@ -1,0 +1,18 @@
+<!-- 商品评价 -->
+<view class="comment">
+  <view style="display: flex;justify-content: space-between;border-bottom:1px solid #F2F5F8;padding-bottom:20rpx">
+    <text>用户评价</text>
+    <text>更多</text>
+  </view>
+  <view style="position:relative">
+    <block wx:for="{{rate}}" wx:key="index">
+      <image src="{{item.user.avatar}}" style="width:80rpx;height:80rpx;border-radius:80rpx;margin-top:30rpx;" />
+      <text style="position: absolute;top:46rpx;left:94rpx">{{item.user.uname}}</text>
+      <view style="margin-top:20rpx">
+        <text style="font-size:26rpx;color:grey">{{item.content}}</text>
+      </view>
+      <view style="margin-top:30rpx">
+        <text style="font-size:26rpx;color:grey;">{{item.style}}</text></view>
+    </block>
+  </view>
+</view>

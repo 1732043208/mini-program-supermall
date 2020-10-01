@@ -1,0 +1,4 @@
+/* pages/detail/childCpns/w-rate/w-rate.wxss */
+.comment{
+  margin: 30rpx;
+}

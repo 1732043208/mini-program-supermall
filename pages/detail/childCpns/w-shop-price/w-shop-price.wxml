@@ -1,0 +1,13 @@
+<!--pages/detail/childCpns/w-shop-price/w-shop-price.wxml-->
+<!-- 商品价格 -->
+<view class="price">
+  <text class="first">{{result.skuInfo.priceRange}}</text>
+  <text class="second">￥{{result.itemInfo.lowPrice}}</text>
+  <view class="discount"><text class="third">{{result.itemInfo.discountDesc}}</text></view>
+</view>
+<!-- 销量 -->
+<view class="sales">
+  <block wx:for="{{result.columns}}" wx:key="index">
+    <text>{{item}}</text>
+  </block>
+</view>

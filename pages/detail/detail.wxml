@@ -1,99 +1,36 @@
 <!--pages/detail/detail.wxml-->
+
 <!-- 1.轮播图 -->
 <w-swiper list="{{topImages}}" isShow="true" />
 
 <!-- 商品标题 -->
 <view class="title">{{itemInfo.title}}</view>
 
-<!-- 商品价格 -->
-<view class="price">
-  <text class="first">{{result.skuInfo.priceRange}}</text>
-  <text class="second">￥{{result.itemInfo.lowPrice}}</text>
-  <view class="discount"><text class="third">{{result.itemInfo.discountDesc}}</text></view>
-</view>
-
-<!-- 销量 -->
-<view class="sales">
-  <block wx:for="{{result.columns}}" wx:key="index">
-    <text>{{item}}</text>
-  </block>
-</view>
+<!-- 商品价格和销量 -->
+<w-shop-price result="{{result}}" />
 
 <!-- 服务保证 -->
-<view class="services">
-  <block wx:for="{{shopInfo.services}}" wx:key="index">
-    <text wx:if="{{index!=0}}" style="padding-left:20rpx;padding-right:20rpx">·</text>
-    <!-- <image src="{{item.icon}}"/> -->
-    <text> {{item.name}}</text>
-  </block>
-</view>
+<w-shop-services shopInfo="{{shopInfo}}" />
 
-<view class="space"></view>
+<view class="space" />
 
 <!-- 店铺信息 -->
-<view style="position:relative;margin-bottom:40rpx">
-  <image src="{{shopInfo.shopLogo}}" style="width:100rpx;height:100rpx;margin-left:40rpx" />
-  <text style=" position: absolute;top:30rpx;margin-left:12rpx">{{result.shopInfo.name}}</text>
-</view>
-
-<!-- 店铺总销量和信誉评分 -->
-<view style="display:flex">
-  <view style="flex:1;border-right:1rpx solid grey;padding-left:100rpx">
-    <view style="display:flex">
-      <text style="flex:1;font-size:28rpx">总销量</text>
-      <text style="flex:1;font-size:28rpx">全部宝贝</text>
-    </view>
-    <view style="display:flex">
-      <text style="flex:1;font-size:32rpx">{{result.shopInfo.cSells}}</text>
-      <text style="flex:1;font-size:32rpx">{{result.shopInfo.cGoods}}</text>
-    </view>
-
-  </view>
-  <view style="flex:1;">
-    <block wx:for="{{shopInfo.score}}" wx:key="index">
-      <view style="position:relative;text-align:center">
-        <text>{{item.name}}</text>
-        <text style="{{item.isBetter?'color:red':'color:green'}}">{{item.score}}</text>
-        <text
-          style=" position: absolute;right:20rpx;{{item.isBetter?'color:red':'color:green'}}">{{item.isBetter?'高':'低'}}</text>
-      </view>
-    </block>
-  </view>
-</view>
+<w-shop-info shopInfo="{{shopInfo}}"></w-shop-info>
 
 <view class="space"></view>
 
 <!-- 商品详情图片 -->
-<block wx:for="{{detailInfo.detailImage[0].list}}" wx:key="index">
-  <image src="{{item}}" mode="widthFix" style="width:100%" />
-</block>
+<w-shop-shopimage detailInfo="{{detailInfo}}" />
+<view class="space" />
 
-<view class="space"></view>
+<!-- 商品评价 -->
+<w-rate rate="{{rate}}" />
 
-<view class="comment">
-  <view style="display: flex;justify-content: space-between;border-bottom:1px solid #F2F5F8">
-    <text>用户评价</text>
-    <text>更多</text>
-  </view>
-  <view>
-    <block wx:for="{{rate}}" wx:key="index">
-      <image src="{{item.user.avatar}}" style="width:80rpx;height:80rpx;border-radius:80rpx;margin-top:30rpx" />
-      <text>{{item.user.uname}}</text>
-      <view style="margin-top:20rpx">
-        <text style="font-size:26rpx;color:grey">{{item.content}}</text>
-      </view>
-      <view style="margin-top:30rpx">
-        <text style="font-size:26rpx;color:grey;">{{item.style}}</text></view>
-    </block>
-  </view>
-</view>
-
-<view class="space"></view>
-
-<view style="text-align:center;color:#ff5777;font-weight:bold">看了又看</view>
+<view class="space" />
 
 <!-- 商品推荐 -->
-<w-goods goods="{{recommend}}" imageShow="{{false}}"></w-goods>
+<view style="text-align:center;color:#ff5777;font-weight:bold">看了又看</view>
+<w-goods goods="{{recommend}}" imageShow="{{false}}" />
 
 <!-- 底部导航 -->
-<w-bottom-bar bind:addcart="onAddCart"></w-bottom-bar>
+<w-bottom-bar bind:addcart="onAddCart" />

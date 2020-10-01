@@ -1,0 +1,4 @@
+<!--pages/detail/childCpns/w-shop-shopimage/w-shop-shopimage.wxml-->
+<block wx:for="{{detailInfo.detailImage[0].list}}" wx:key="index">
+  <image src="{{item}}" mode="widthFix" style="width:100%" />
+</block>

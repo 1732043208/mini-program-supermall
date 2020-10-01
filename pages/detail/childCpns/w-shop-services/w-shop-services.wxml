@@ -1,0 +1,8 @@
+<!--pages/detail/childCpns/w-shop-services/w-shop-services.wxml-->
+<view class="services">
+  <block wx:for="{{shopInfo.services}}" wx:key="index" wx:if="{{index<4}}">
+    <text wx:if="{{index!=0}}" style="padding-left:20rpx;padding-right:20rpx">·</text>
+    <!-- <image src="{{item.icon}}"/> -->
+    <text> {{item.name}}</text>
+  </block>
+</view>
