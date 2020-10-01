@@ -1,4 +1,7 @@
 /* pages/cart/cart.wxss */
+.box{
+  margin-top: 20rpx;
+}
 .card {
   position: relative;
   margin-bottom: 60rpx;
@@ -15,7 +18,7 @@
 }
 
 .price {
-padding-top: 10rpx;
+  padding-top: 10rpx;
   color: red;
   font-weight: bold;
   font-size: 34rpx;
@@ -26,12 +29,14 @@ padding-top: 10rpx;
   height: 200rpx;
   border-radius: 12rpx
 }
-.cutprice{
+
+.cutprice {
   text-decoration: line-through;
   color: #000;
   font-size: 26rpx;
   font-weight: normal;
 }
+
 .discount {
   float: left;
   border: 1rpx solid #ff5777;
@@ -45,28 +50,33 @@ padding-top: 10rpx;
 .footer {
   display: flex;
   position: absolute;
-  right: 40rpx;
-  bottom: 14rpx;
-  height: 40rpx;
-  text-align: center;
+  right: 14px;
+  top: 160rpx;
 }
 
 .footer-left {
-  line-height: 10rpx;
-  border-radius: 20rpx 0 0 20rpx;
-  font-size: 40rpx;
-  border: 1px solid grey;
+  width: 20rpx;
+  height: 80rpx;
+  border-radius: 2px;
+  border: 1px solid #EAEAEA;
+  background-color: #fff;
 }
 
 .footer-middle {
   width: 80rpx;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+  border-top: 1px solid #EAEAEA;
+  border-bottom: 1px solid #EAEAEA;
 }
 
 .footer-right {
-  border-radius: 0 20rpx 20rpx 0;
-  border: 1px solid grey;
-  font-size: 40rpx;
   line-height: 30rpx;
+  width: 20rpx;
+  height: 40rpx;
+  border-radius: 2px;
+  border: 1px solid #EAEAEA;
+  background-color: #fff;
+}
+
+.tick {
+  margin-left: 26rpx;
 }

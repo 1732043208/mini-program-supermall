@@ -15,12 +15,13 @@
 <view class="space" />
 
 <!-- 店铺信息 -->
-<w-shop-info shopInfo="{{shopInfo}}"></w-shop-info>
+<w-shop-info shopInfo="{{shopInfo}}"/>
 
 <view class="space"></view>
 
 <!-- 商品详情图片 -->
 <w-shop-shopimage detailInfo="{{detailInfo}}" />
+
 <view class="space" />
 
 <!-- 商品评价 -->

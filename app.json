@@ -39,7 +39,6 @@
     "navigationBarBackgroundColor": "#ff5777",
     "navigationBarTextStyle": "white"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
