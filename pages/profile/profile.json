@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+"w-list-view":"../profile/childCpns/w-list-view/w-list-view",
+    "w-info":"../profile/childCpns/w-info/w-info",
+    "w-header":"../profile/childCpns/w-header/w-header"
+  }
 }

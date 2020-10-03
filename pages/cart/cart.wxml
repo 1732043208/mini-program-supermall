@@ -1,9 +1,18 @@
 <!--pages/cart/cart.wxml-->
+
 <block wx:for="{{cartList}}" wx:key="index">
 <cart-list-item item="{{item}}" index="{{index}}"></cart-list-item>
 </block>
 
-<van-submit-bar price="{{ 3050 }}" button-text="提交订单" bind:submit="onClickButton" tip="{{ true }}">
-  <van-tag type="primary">标签</van-tag>
+<van-submit-bar
+  price="{{ totalPrice *100}}"
+  button-text="提交订单"
+  bind:submit="onClickButton"
+  tip="{{ true }}"
+>
+<view class='check-box'>
+    <w-check-icon icon="icon" isChecked="{{isSelectAll}}" bindtap="onSelectAll"/>
+<text class="niubi">全选</text>
+  </view>
   <view slot="tip">您的收货地址不支持同城送, <text>修改地址</text></view>
 </van-submit-bar>

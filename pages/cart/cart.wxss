@@ -1,1 +1,11 @@
 /* pages/cart/cart.wxss */
+.check-box{
+  width: 200rpx;
+  margin-top: 6rpx;
+  position: relative;
+}
+.niubi{
+position: absolute;
+top: 4rpx;
+left: 60rpx;
+}

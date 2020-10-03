@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "cart-list-item": "../cart/childCpns/cart-list-item/cart-list-item"
+    "cart-list-item": "../cart/childCpns/cart-list-item/cart-list-item",
+    "w-check-icon":"../../components/w-check-icon/w-check-icon"
   },
   "navigationBarTitleText": "购物车"
 }

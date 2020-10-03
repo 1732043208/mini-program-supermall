@@ -44,10 +44,6 @@ Page({
     }
   },
 
-  cutCount() {
-    console.log('sdsssds')
-
-  },
   onChange(event) {
     this.setData({
       checked: event.detail,
@@ -79,5 +75,26 @@ Page({
       totalCounter: counter,
       totalPrice: totalPrice
     })
-  }
+  },
+  onSelectAll() {
+    // 1.判断是否是全部选中
+    if (this.data.isSelectAll) { // 目前全部选中
+      this.data.cartList.forEach(item => {
+        item.checked = false
+      })
+      this.setData({
+        cartList: this.data.cartList,
+        isSelectAll: false
+      })
+    } else { // 某些没选中
+      this.data.cartList.forEach(item => {
+        item.checked = true
+      })
+      this.setData({
+        cartList: this.data.cartList,
+        isSelectAll: true
+      })
+    }
+  },
+
 })
