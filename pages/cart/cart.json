@@ -1,5 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "cart-list-item": "../cart/childCpns/cart-list-item/cart-list-item"
+  },
   "navigationBarTitleText": "购物车"
-
 }

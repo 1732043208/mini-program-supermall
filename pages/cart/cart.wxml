@@ -1,34 +1,6 @@
 <!--pages/cart/cart.wxml-->
-
 <block wx:for="{{cartList}}" wx:key="index">
-<view class="box">
-  <view class="tick">
-    <van-checkbox value="{{ checked }}" bind:change="onChange" style="font-weight:bold">{{item.name}}</van-checkbox>
-  </view>
-
-  <view class="card">
-    <van-card>
-      <view slot="thumb">
-        <image src="{{ item.imageURL }}" class="image"></image>
-      </view>
-      <view slot="price" class="price" >
-        <text>￥ {{item.price}} </text>
-        <text class="cutprice">{{item.highPrice}}</text>
-      </view>
-      <view slot="desc">
-        <block wx:for="{{item.discount}}" wx:if="{{index<2}}" wx:key="index">
-          <view class="discount">{{item}}</view>
-        </block>
-      </view>
-      <view slot="title" class="title">{{ item.title }}</view>
-      <view slot="footer" class="footer" >
-        <button class="footer-right">-</button>
-        <view class="footer-middle">{{item.count}}</view>
-        <button class="footer-right">+</button>
-      </view>
-    </van-card>
-  </view>
-</view>
+<cart-list-item item="{{item}}" index="{{index}}"></cart-list-item>
 </block>
 
 <van-submit-bar price="{{ 3050 }}" button-text="提交订单" bind:submit="onClickButton" tip="{{ true }}">

@@ -11,6 +11,10 @@ App({
       // console.log(this.globalData.cartList)
     }
 
+     // 2.购物车回调
+     if (this.addCartCallback) {
+      this.addCartCallback()
+    }
   },
   globalData:{
     cartList:[]

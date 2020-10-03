@@ -1,0 +1,30 @@
+<!--pages/cart/childCpns/cart-list-item/cart-list-item.wxml-->
+<view class="box">
+  <view class='item-icon'>
+    <w-check-icon bindtap='onCheckClick' data-index="{{index}}" isChecked="{{item.checked}}"/>
+    <text class="store">{{item.name}}</text>
+  </view>
+
+  <view class="card">
+    <van-card>
+      <view slot="thumb">
+        <image src="{{ item.imageURL }}" class="image"></image>
+      </view>
+      <view slot="price" class="price" >
+        <text>￥ {{item.price}} </text>
+        <text class="cutprice">{{item.highPrice}}</text>
+      </view>
+      <view slot="desc">
+        <block wx:for="{{item.discount}}" wx:if="{{index<2}}" wx:key="index">
+          <view class="discount">{{item}}</view>
+        </block>
+      </view>
+      <view slot="title" class="title">{{ item.title }}</view>
+      <view slot="footer" class="footer" >
+        <button class="footer-right">-</button>
+        <view class="footer-middle">{{item.count}}</view>
+        <button class="footer-right">+</button>
+      </view>
+    </van-card>
+  </view>
+</view>
