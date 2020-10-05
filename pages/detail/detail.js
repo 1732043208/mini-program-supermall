@@ -69,7 +69,7 @@ Page({
   _getrecommend() {
     getrecommend().then(res => {
       const recommend = res.data.data.list;
-      console.log(recommend)
+      // console.log(recommend)
       this.setData({
         recommend
       })
