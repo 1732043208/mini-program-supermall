@@ -90,7 +90,9 @@ Page({
     obj.price = this.data.itemInfo.lowPrice;
     obj.highPrice=this.data.itemInfo.highPrice;
     obj.name=this.data.shopInfo.name;
+    obj.shopLogo=this.data.shopInfo.shopLogo
     obj.discount=this.data.result.promotions.list;
+
     // console.log(obj)
 
     app.addToCart(obj)

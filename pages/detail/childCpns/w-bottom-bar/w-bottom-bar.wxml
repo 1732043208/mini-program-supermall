@@ -1,17 +1,17 @@
 <!--pages/detail/childCpns/w-bottom-bar.wxml-->
-<view class='bottom-bar'>
+<view class='bottom-bar' style="padding-bottom:{{bottom}}">
   <view class='bar-left bar-item'>
     <view class='left-item service'>
-      <image src="/assets/detail/service.png"/>
+      <image src="/assets/detail/service.png" />
       <view style="font-size: 24rpx;">客服</view>
     </view>
     <view class='left-item'>
-      <image src="/assets/detail/shop.png"/>
-      <view  style="font-size: 24rpx;">店铺</view>
+      <image src="/assets/detail/shop.png" />
+      <view style="font-size: 24rpx;">店铺</view>
     </view>
     <view class='left-item'>
-      <image src="/assets/detail/collect.png"/>
-      <view  style="font-size: 24rpx;">收藏</view>
+      <image src="/assets/detail/collect.png" />
+      <view style="font-size: 24rpx;">收藏</view>
     </view>
   </view>
   <view class='bar-right bar-item'>
