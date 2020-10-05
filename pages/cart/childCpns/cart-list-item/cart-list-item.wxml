@@ -1,10 +1,10 @@
 <!--pages/cart/childCpns/cart-list-item/cart-list-item.wxml-->
 <view class="box">
   <view class='item-icon'>
-   
-    <image src="{{item.shopLogo}}" class="shopLogo"/>
+
+    <image src="{{item.shopLogo}}" class="shopLogo" />
     <view class="store">{{item.name}}</view>
-    <w-check-icon bindtap='onCheckClick' data-index="{{index}}" isChecked="{{item.checked}}" class="icon"/>
+    <w-check-icon bindtap='onCheckClick' data-index="{{index}}" isChecked="{{item.checked}}" class="icon" />
   </view>
 
   <view class="card">
