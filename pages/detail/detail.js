@@ -22,13 +22,7 @@ Page({
     recommend: [],
     rate: [],
     itemInfo: {},
-    show: false,
     isIphone: false
-  },
-  open: function () {
-    this.setData({
-      show: true
-    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -75,6 +69,7 @@ Page({
   _getrecommend() {
     getrecommend().then(res => {
       const recommend = res.data.data.list;
+      console.log(recommend)
       this.setData({
         recommend
       })

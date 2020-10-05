@@ -12,8 +12,5 @@ export function getDetailData(iid) {
 export function getrecommend() {
   return request({
     url: baseURL + 'recommend',
-    data:{
-     
-    }
   })
 }

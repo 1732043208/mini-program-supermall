@@ -31,7 +31,7 @@
 
 <!-- 商品推荐 -->
 <view style="text-align:center;color:#ff5777;font-weight:bold">看了又看</view>
-<w-goods goods="{{recommend}}" imageShow="{{false}}" />
+<w-goods goods="{{recommend}}"/>
 
 <!-- 底部导航 -->
 <w-bottom-bar bind:addcart="onAddCart" isIphone="{{isIphone}}"/>

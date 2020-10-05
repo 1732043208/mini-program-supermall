@@ -8,10 +8,7 @@ Component({
       type: Object,
       value: {}
     },
-    imageItemShow:{
-      type:Boolean,
-      value:true
-    }
+
   },
 
   /**
@@ -26,12 +23,15 @@ Component({
    */
   methods: {
     pushDetailPage(e) {
-      const id = e.currentTarget.dataset.iid
+      // 判断:如果点击事件下有iid这个参数才触发跳转事件
+      if (e.currentTarget.dataset.iid) {
+        const id = e.currentTarget.dataset.iid
+        wx.navigateTo({
+          url: '../../pages/detail/detail?id=' + id,
+        })
+      }
 
-      wx.navigateTo({
-        url: '../../pages/detail/detail?id=' + id,
-      })
-      
+
     }
 
   }

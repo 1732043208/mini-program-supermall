@@ -8,10 +8,7 @@ Component({
       type: Array,
       value: []
     },
-    imageShow:{
-      type:Boolean,
-      value:true
-    }
+  
   },
 
   /**
