@@ -93,7 +93,7 @@ Page({
     obj.highPrice = this.data.itemInfo.highPrice;
     obj.name = this.data.shopInfo.name;
     obj.shopLogo = this.data.shopInfo.shopLogo
-    obj.discount = this.data.result.promotions.list;
+    obj.discount = this.data.result;
 
     // console.log(obj)
 

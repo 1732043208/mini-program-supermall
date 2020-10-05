@@ -19,7 +19,7 @@
       </view>
 
       <view slot="desc">
-        <block wx:for="{{item.discount}}" wx:if="{{index<2}}" wx:key="index">
+        <block wx:for="{{item.discount.promotions.list}}" wx:if="{{index<2}}" wx:key="index">
           <view class="discount">{{item}}</view>
         </block>
       </view>
