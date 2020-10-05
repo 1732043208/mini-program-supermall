@@ -1,11 +1,35 @@
 /* pages/cart/cart.wxss */
-.check-box{
+page{
+  background: #f2f2f2;
+  }
+.check-box {
   width: 200rpx;
   margin-top: 6rpx;
   position: relative;
 }
-.niubi{
-position: absolute;
-top: 4rpx;
-left: 60rpx;
+
+.niubi {
+  position: absolute;
+  top: 4rpx;
+  left: 60rpx;
+}
+
+.cartnull {
+  text-align: center;
+  margin-top: 200rpx;
+}
+
+.imagenull {
+  width: 300rpx;
+  height: 300rpx;
+
+}
+.NullSpanFirst{
+  font-size: 40rpx;
+  margin-bottom: 10rpx;
+}
+.NullSpanSecond{
+  font-size: 28rpx;
+  color: #949494;
+  margin-bottom: 20rpx;
 }

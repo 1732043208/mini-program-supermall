@@ -49,7 +49,7 @@ Page({
       checked: event.detail,
     });
   },
-    onShow() {
+  onShow() {
     wx.setNavigationBarTitle({
       title: `购物车(${this.data.cartList.length})`,
     })
@@ -96,5 +96,21 @@ Page({
       })
     }
   },
+  onClickButton() {
+    if (this.data.cartList.length !== 0) {
+      this.setData({
+        cartList: []
+      })
+    }
+    wx.showToast({
+      title: '提交订单成功',
+    })
+  },
+  pushHome() {
+    wx.switchTab({
+      url: '../home/home',
+
+    })
+  }
 
 })
