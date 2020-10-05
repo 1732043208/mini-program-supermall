@@ -34,4 +34,4 @@
 <w-goods goods="{{recommend}}" imageShow="{{false}}" />
 
 <!-- 底部导航 -->
-<w-bottom-bar bind:addcart="onAddCart" />
+<w-bottom-bar bind:addcart="onAddCart" isIphone="{{isIphone}}"/>

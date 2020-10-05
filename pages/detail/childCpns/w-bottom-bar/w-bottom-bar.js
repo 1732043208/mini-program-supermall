@@ -5,18 +5,19 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    isIphone:{
+      type:Boolean,
+      value:false
+    }
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-    bottom: ''
+    
   },
-  ready() {
-    this.getSytemInfo()
-  },
+ 
   /**
    * 组件的方法列表
    */
@@ -24,14 +25,7 @@ Component({
     onAddCart() {
       this.triggerEvent('addcart', {}, {})
     },
-    getSystemInfo() {
-      let isIphone = App.globalData.isIphone;
-      if (isIphone) {
-        this.setData({
-          bottom: '58rpx'
-        })
-      }
-    }
+ 
   },
 
 })

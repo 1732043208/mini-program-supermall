@@ -1,5 +1,5 @@
 <!--pages/detail/childCpns/w-bottom-bar.wxml-->
-<view class='bottom-bar' style="padding-bottom:{{bottom}}">
+<view class='bottom-bar' style="padding-bottom:{{isIphone?'58rpx':''}}">
   <view class='bar-left bar-item'>
     <view class='left-item service'>
       <image src="/assets/detail/service.png" />

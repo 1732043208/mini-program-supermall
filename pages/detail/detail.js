@@ -7,7 +7,7 @@ import {
   getrecommend
 } from '../../service/detail.js'
 // pages/detail/detail.js
-const app=getApp()
+const app = getApp()
 Page({
 
   /**
@@ -23,17 +23,17 @@ Page({
     rate: [],
     itemInfo: {},
     show: false,
+    isIphone: false
   },
   open: function () {
     this.setData({
-        show: true
+      show: true
     })
-},
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
     const iid = options.id
     this.setData({
       iid,
@@ -41,7 +41,9 @@ Page({
     this._getDetailData(iid);
     this._getrecommend();
 
-
+    this.setData({
+      isIphone: app.globalData.isIphone
+    })
   },
   _getDetailData(iid) {
     getDetailData(iid).then(res => {
@@ -88,10 +90,10 @@ Page({
     obj.imageURL = this.data.topImages[0];
     obj.title = this.data.itemInfo.title;
     obj.price = this.data.itemInfo.lowPrice;
-    obj.highPrice=this.data.itemInfo.highPrice;
-    obj.name=this.data.shopInfo.name;
-    obj.shopLogo=this.data.shopInfo.shopLogo
-    obj.discount=this.data.result.promotions.list;
+    obj.highPrice = this.data.itemInfo.highPrice;
+    obj.name = this.data.shopInfo.name;
+    obj.shopLogo = this.data.shopInfo.shopLogo
+    obj.discount = this.data.result.promotions.list;
 
     // console.log(obj)
 
@@ -105,6 +107,7 @@ Page({
     if (value < 10000) return value;
     return (value / 10000).toFixed(1) + '万'
 
-  }
+  },
+
 
 })
