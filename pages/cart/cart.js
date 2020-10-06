@@ -101,10 +101,17 @@ Page({
       this.setData({
         cartList: []
       })
-    }
-    wx.showToast({
+
+       wx.showToast({
       title: '提交订单成功',
     })
+    }else{
+      wx.showToast({
+        title: '请选择需要购买的商品',
+        icon:'loading'
+      })
+    }
+   
   },
   pushHome() {
     wx.switchTab({
