@@ -4,7 +4,7 @@
 </block>
 
 <!-- 撑开购物车底部跟SubmitBar提交订单栏的距离 -->
-<view style="height:200rpx;width:100%"></view>
+<view style="height:200rpx;width:100%" wx:if="{{cartList.length!==0}}"></view>
 
 <!-- 若cartList为空，就显示此view -->
 <view wx:if="{{cartList.length === 0}}" class="cartnull">
