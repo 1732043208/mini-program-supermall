@@ -23,7 +23,7 @@ App({
       success: res => {
         let modelmes = res.model;
         console.log(res.model)
-        let iphoneArr = ['iPhone X', 'iphone 11', 'iPhone 11 Pro Max']
+        let iphoneArr = ['iPhone X', 'iPhone 11', 'iPhone 11 Pro Max']
         iphoneArr.forEach(function (item) {
           if (modelmes.search(item) != -1) {
             _this.globalData.isIphone = true
