@@ -27,9 +27,9 @@
       <view slot="title" class="title">{{ item.title }}</view>
 
       <view slot="footer" class="footer">
-        <button class="footer-right">-</button>
+        <button class="footer-right" bindtap="cutCount">-</button>
         <view class="footer-middle">{{item.count}}</view>
-        <button class="footer-right">+</button>
+        <button class="footer-right" bindtap="addCount">+</button>
       </view>
     </van-card>
   </view>

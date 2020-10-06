@@ -20,6 +20,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    listItem(){
+      wx.showToast({
+        title: '暂无数据',
+        icon:'loading',
+      })
+    }
   }
 })

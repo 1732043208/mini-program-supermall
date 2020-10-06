@@ -37,23 +37,18 @@ Component({
       console.log(index)
       app.changeGoodsState(index, item)
     },
+    // 改变app.js里面的count
     cutCount(e) {
-      if (this.data.count > 1) {
-        const item = app.globalData.cartList.find(item => item.iid == this.properties.item.iid)
-        item.count = item.count - 1
-        this.setData({
-          count: item.count
-        })
-        
+      const item = app.globalData.cartList.find(item => item.iid == this.properties.item.iid)
+      if (item.count > 1) {
+        app.cutToCart(item)
       }
+
     },
+    // 改变app.js里面的count
     addCount(e) {
       const item = app.globalData.cartList.find(item => item.iid == this.properties.item.iid)
-      item.count = item.count + 1
-      this.setData({
-        count: item.count
-      })
-
+      app.addToCart(item)
     }
   }
 })
