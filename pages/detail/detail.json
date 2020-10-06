@@ -7,7 +7,8 @@
     "w-shop-services":"/pages/detail/childCpns/w-shop-services/w-shop-services",
     "w-shop-info":"/pages/detail/childCpns/w-shop-info/w-shop-info",
     "w-shop-shopimage":"/pages/detail/childCpns/w-shop-shopimage/w-shop-shopimage",
-    "w-rate":"/pages/detail/childCpns/w-rate/w-rate"
+    "w-rate":"/pages/detail/childCpns/w-rate/w-rate",
+    "w-back-top":"/components/w-back-top/w-back-top"
   },
   "navigationBarTitleText": "商品详情"
 }

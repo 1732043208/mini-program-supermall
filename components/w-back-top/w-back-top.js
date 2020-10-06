@@ -4,7 +4,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    isBottomTabbar: {
+      type: Boolean,
+      value: false
+    }
   },
 
   /**
@@ -18,7 +21,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    handleBackTop(){
+    handleBackTop() {
       //回到顶部
       wx.pageScrollTo({
         scrollTop: 0,

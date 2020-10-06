@@ -1,20 +1,21 @@
 /* components/w-back-top/w-back-top.wxss */
-.back-top{
-  width: 80rpx;
-  height: 80rpx;
+.back-top {
+  width: 90rpx;
+  height: 90rpx;
   position: fixed;
-  right: 10rpx;
-  bottom: 10rpx;
-  border-radius: 40rpx;
+  right: 20rpx;
+  bottom: 20rpx;
+  border-radius: 50rpx;
   background: #ffffff;
   text-align: center;
 
 
 }
-.back-top >.image{
+
+.back-top>.image {
   display: block;
-width: 80rpx;
-height: 80rpx;
-color: #ff5777;
+  width: 90rpx;
+  height: 90rpx;
+  color: #ff5777;
 
 }

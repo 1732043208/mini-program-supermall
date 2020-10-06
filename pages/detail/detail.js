@@ -7,7 +7,8 @@ import {
   getrecommend
 } from '../../service/detail.js'
 // pages/detail/detail.js
-const app = getApp()
+const app = getApp();
+const TOP_DISTANCE = 1000;
 Page({
 
   /**
@@ -22,7 +23,21 @@ Page({
     recommend: [],
     rate: [],
     itemInfo: {},
-    isIphone: false
+    isIphone: false,
+    showBackTop: false,
+  },
+  onPageScroll(option) {
+    // 1.取出scrollTop
+    const scrollTop = option.scrollTop;
+
+    // 2.修改showbackTop属性  
+    //官方：不要在滚动的函数回调中频繁调用this.setData
+    const isShow1 = scrollTop >= TOP_DISTANCE;
+    if (isShow1 != this.data.showBackTop) {
+      this.setData({
+        showBackTop: isShow1
+      })
+    }
   },
   /**
    * 生命周期函数--监听页面加载
