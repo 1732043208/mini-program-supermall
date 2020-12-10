@@ -1,6 +1,6 @@
 <!--components/w-goods-item/w-goods-item.wxml-->
 <view class="goods-item" bindtap="pushDetailPage" data-iid='{{item.iid}}'>
-  <image src="{{item.image || item.img || item.show.img}}" mode="widthFix" class="image" />
+  <image src="{{item.image || item.img || item.show.img}}"  class="image" />
   <view class="desc-info">
     <view class="title">{{item.title}}</view>
     <view class="info">
